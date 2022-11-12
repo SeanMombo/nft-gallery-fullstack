@@ -6,3 +6,12 @@
   overflow: hidden;
   background: rgb(243, 243, 243);
 }
+
+.container  h1 {
+  margin: 10px 0 0;
+  flex: unset;
+}
+.container  h4 {
+  font-size: 15px;
+  margin: 0 0 10px;
+}

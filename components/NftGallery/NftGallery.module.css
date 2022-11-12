@@ -4,6 +4,7 @@
   grid-gap: 4rem;
   padding: 40px 10%;
   overflow: auto;
+  overflow-x: hidden;
 }
 
 @media (max-width: 768px) {
