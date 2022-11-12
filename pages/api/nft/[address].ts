@@ -2,13 +2,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import axios from 'axios';
 
-export default async function handler(
+export default function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
   // get address from dynamic route param
   const { address } = req.query
-  
+
   // graphql query
   const query = `{
     tokens(networks: [{network: ETHEREUM, chain: MAINNET}], 
