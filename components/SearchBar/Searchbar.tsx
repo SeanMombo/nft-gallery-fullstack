@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import useNftStore from '../../store/nfts';
-import styles from '../../styles/SearchBar.module.css';
+import styles from './SearchBar.module.css';
 
 const SearchBar = () => {
   // get store state and actions
