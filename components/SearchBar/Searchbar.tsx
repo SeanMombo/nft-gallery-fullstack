@@ -14,8 +14,26 @@ const SearchBar = () => {
   //create a function to handle the search button click
   const onSubmit = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
+    console.log(address)
+
+    // prevent empty search
+    if (address === '') {
+      setError('Address cannot be empty');
+      setNfts([]);
+      return 
+    }
+
+    // prevent search with spaces
+    if (address.includes(' ')) {
+      setError('Address cannot contain spaces');
+      setNfts([]);
+      return 
+    }
+
+    // fetch nfts from api
     axios.get(`/api/nft/${address}`)
     .then((res) => {
+      setError('')
       setNfts(res.data);
     })
     .catch((err) => {
@@ -27,7 +45,6 @@ const SearchBar = () => {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const input: HTMLInputElement = event.currentTarget;
     setAddress(input.value);
-    setError('')
   }
 
   return (
