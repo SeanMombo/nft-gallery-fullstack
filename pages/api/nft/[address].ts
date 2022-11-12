@@ -6,8 +6,10 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+  // get address from dynamic route param
   const { address } = req.query
   
+  // graphql query
   const query = `{
     tokens(networks: [{network: ETHEREUM, chain: MAINNET}], 
           where: {ownerAddresses: "${address}"}) {
@@ -26,6 +28,7 @@ export default function handler(
     }
   }`
   
+  // fetch nfts from zora api using axios
   axios.get(`https://api.zora.co/graphql?query=${query}`)
   .then(response => {
     // if no data, send error response
