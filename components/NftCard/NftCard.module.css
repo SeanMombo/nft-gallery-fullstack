@@ -24,7 +24,7 @@
 
 .nftCardInner {
   transform: translateZ(50px);
-  position: relaive;
+  position: relative;
 }  
 
 .nftCard img {
