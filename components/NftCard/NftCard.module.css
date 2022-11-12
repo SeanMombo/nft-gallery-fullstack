@@ -34,4 +34,14 @@
 
 .nftCard h3 {
   font-size: 2rem;
+  margin-bottom: 0;
+}
+
+.nftCard p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+  height: 3rem;
+  overflow: hidden;
+  font-size: 0.8rem;
 }

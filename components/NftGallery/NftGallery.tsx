@@ -12,9 +12,10 @@ const NftGallery = () => {
       {nfts.map((nft, index) => {
         return (
           <NftCard
-          key={index}
-          image={nft.image.url}
-          name={nft.name}
+            key={index}
+            image={nft.image.url}
+            name={nft.name}
+            description={nft.metadata.description}
           />
           );
         })}

@@ -6,11 +6,12 @@ import Image from 'next/image'
 
 interface NftCardProps {
   name: string,
-  image: string
+  image: string,
+  description: string,
 } 
 
 const NftCard = (props: NftCardProps) => {
-  const { name, image} = props;
+  const { name, image, description } = props;
 
   return (
     <Tilt
@@ -28,6 +29,7 @@ const NftCard = (props: NftCardProps) => {
           fill={true}
           />
         <h3>{name}</h3>
+        <p>{description}</p>
       </div>
     </Tilt>
   )
